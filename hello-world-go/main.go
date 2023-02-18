@@ -18,18 +18,13 @@ func main() {
 
 	for {
 		fmt.Print(" => ")
-
 		userInput, _ := reader.ReadString('\n')
-
 		userInput = strings.Replace(userInput, "\r\n", "", -1)
 		userInput = strings.Replace(userInput, "\n", "", -1)
-
-		response := doctor.Response(userInput)
-
 		if userInput == "quit" {
 			break
 		} else {
-			fmt.Println(response)
+			fmt.Println(doctor.Response(userInput))
 		}
 	}
 }
